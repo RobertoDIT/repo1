@@ -4,7 +4,7 @@ pipeline {
     stage('compilar') {
       steps {
         withMaven(maven: 'Maven-1') {
-          bat 'mvn clean install -D skipTest'
+          bat 'mvn clean install -DskipTests=true'
         }
 
       }
