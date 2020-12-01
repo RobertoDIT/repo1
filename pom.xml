@@ -28,7 +28,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.1</version>
         <configuration>
-          <webXml>web.xml</webXml>
+          <webXml>JenkinsJSF/WebContent/WEB-INF/web.xml</webXml>
         </configuration>
       </plugin>
     </plugins>
