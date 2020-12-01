@@ -11,7 +11,7 @@ pipeline {
     }
     stage('desplegar') {
       steps {
-          deploy adapters: [tomcat7(path: '', url: 'http://localhost:8081')], contextPath: 'JenkinsJSF\\JenkinsJSF\\0.0.1-SNAPSHOT', war: 'JenkinsJSF-0.0.1-SNAPSHOT.war'
+          deploy adapters: [tomcat7(path: '', url: 'http://localhost:8081')], contextPath: 'repo1', war: '**/*.war'
       }
     } 
   }
