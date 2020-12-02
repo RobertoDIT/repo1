@@ -31,5 +31,17 @@ pipeline {
       }
     }
 
+    stage('sonar') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          withMaven(jdk: 'Java-8', maven: 'Maven-1') {
+            bat 'mvn sonar:sonar -Duser.home=/data/jenkins/ -Dmaven.test.failure.ignore=true'
+          }
+
+        }
+
+      }
+    }
+
   }
 }
