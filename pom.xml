@@ -11,19 +11,7 @@
 	
 	
 	
-	
-	
-  <parent>
-    <groupId>org.jenkins-ci</groupId>
-    <artifactId>jenkins</artifactId>
-    <version>1.58</version>
-    <relativePath />
-  </parent>
 
-  <groupId>org.jenkins-ci.main</groupId>
-  <artifactId>jenkins-parent</artifactId>
-  <version>${revision}${changelist}</version>
-  <packaging>pom</packaging>	
 	
 	
   <modules>
@@ -34,41 +22,6 @@
     <module>cli</module>
   </modules>
 
-  <scm>
-    <connection>scm:git:git://github.com/jenkinsci/jenkins.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/jenkins.git</developerConnection>
-    <url>https://github.com/jenkinsci/jenkins</url>
-    <tag>${scmTag}</tag>
-  </scm>
-
-  <distributionManagement>
-    <site>
-      <id>github-pages</id>
-      <url>gitsite:git@github.com/jenkinsci/maven-site.git:core</url>
-    </site>
-  </distributionManagement>
-
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.jenkins-ci.org/browse/JENKINS/component/15593</url>
-  </issueManagement>	
-	
-  <repositories>
-    <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-      <!-- allow snapshots -->
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </pluginRepository>
-  </pluginRepositories>	
-	
-	
 	
 	
 	
