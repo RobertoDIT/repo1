@@ -18,7 +18,7 @@ pipeline {
 
     stage('test') {
       steps {
-        withMaven(maven: 'Maven-1') {
+        withMaven(maven: 'Maven-1',jdk:'Java-8') {
           bat 'mvn test -Dmaven.test.failure.ignore=true'
         }
 
