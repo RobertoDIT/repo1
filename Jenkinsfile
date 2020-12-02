@@ -1,14 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('compilar') {
-      steps {
-        withMaven(maven: 'Maven-1',jdk:'Java-8') {
-          bat 'mvn clean install -DskipTests=true'
-        }
 
-      }
-    }
 
     stage('desplegar') {
       steps {
